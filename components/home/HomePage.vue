@@ -71,7 +71,6 @@ const makeUser = async () => {
     const res = await axios.post('http://localhost:8080/make-user');
     users.value.push(res.data);
   } catch (err) {
-    error.value = 'Failed to create user: ' + err.message;
     console.error(err);
   } finally {
     loading.value = false;
